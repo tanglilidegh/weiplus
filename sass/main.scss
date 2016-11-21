@@ -1,0 +1,798 @@
+@import 'px2rem';
+
+/* ===========
+   common START
+   ===========*/
+
+.golden-font {
+  color: #fbab00;
+}
+
+.light_blue_font {
+  color: #99ccff;
+}
+
+.white_font {
+  color: #fff;
+}
+.small_font{
+  @include font-dpr(10px);
+}
+.f-t-18 {
+  @include font-dpr(18px);
+}
+
+.f-t-14 {
+  @include font-dpr(14px);
+}
+
+.f-t-16 {
+  @include font-dpr(16px);
+}
+
+.f-b {
+  font-weight: bolder;
+}
+
+.m-b-100 {
+  @include px2rem(margin-bottom, 100px);
+}
+.m-b-60 {
+  @include px2rem(margin-bottom, 60px);
+}
+.m-b-80 {
+  @include px2rem(margin-bottom, 80px);
+}
+.m-b-150 {
+  @include px2rem(margin-bottom, 150px);
+}
+.m-b-30 {
+  @include px2rem(margin-bottom, 30px);
+}
+.m-r-15 {
+  @include px2rem(margin-right, 15px);
+}
+.p-b-40{
+  @include px2rem(padding-bottom, 40px);
+
+}
+.fp-tableCell {
+  display: table-cell;
+  vertical-align: top !important;
+  width: 100%;
+  height: 100%;
+}
+
+.default-bg {
+  width: 100%;
+  //height: 100%;
+  height: auto;
+  overflow: auto;
+  background: url("../img/bg.jpg") no-repeat center top;
+  background-size: 100%;
+}
+
+.page-bg{
+  width: 100%;
+  background: url("../img/detail.jpg") no-repeat center top;
+  background-size: 100%;
+}
+/* ===========
+   common START
+   ===========*/
+
+/* ===========
+   报名页 START
+   ===========*/
+
+.sign-up {
+  color: #fff;
+  form {
+    @include px2rem(padding-top, 40px);
+    width: 94%;
+  }
+  .input-line {
+    width: 100%;
+    @include px2rem(margin-bottom, 10px);
+  }
+  input {
+    @include px2rem(padding-left, 20px);
+    width: 70%;
+    @include px2rem(height, 68px);
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid #fff;
+  }
+  label {
+    @include px2rem(padding-right, 10px);
+    display: inline-block;
+    width: 24%;
+    text-align: right;
+    @include font-dpr(16px);
+  }
+  .w33 {
+    width: 33% !important;
+  }
+  .slogan {
+    width: 100%;
+    @include px2rem(height, 120px);
+    @include px2rem(line-height, 120px);
+    text-align: center;
+    @include font-dpr(14px);
+  }
+  .codes-btn {
+    padding-left: 0;
+    color: #54b1fd;
+    border: 1px solid #54b1fd;
+    @include font-dpr(16px);
+    text-align: center;
+    background-color: transparent;
+    vertical-align: middle;
+  }
+  .submit-btn {
+    @include px2rem(margin-top, 80px);
+    @include px2rem(margin-bottom, 40px);
+    display: block;
+    @include px2rem(width, 551px);
+    @include px2rem(height, 87px);
+    background: url("../img/submit-btn.png") no-repeat center top;
+    background-size: 100%;
+  }
+}
+
+/* 图片上传按钮的样式 START */
+.fileWrap {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  @include px2rem(width, 150px);
+  @include px2rem(height, 150px);
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.fileWrap input[type=file] {
+  @include px2rem(width, 150px);
+  @include px2rem(height, 150px);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 12;
+}
+
+.fileWrap button {
+  position: absolute;
+  @include px2rem(top, 50px);
+  @include px2rem(left, 50px);
+  z-index: 0;
+  @include px2rem(width, 45px);
+  @include px2rem(height, 45px);
+  img {
+    @include px2rem(width, 45px);
+    @include px2rem(height, 45px);
+  }
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.fileName {
+  display: inline-block;
+  width: 45%;
+  vertical-align: middle;
+  @include px2rem(padding-left, 10px);
+  @include px2rem(height, 70px);
+  @include px2rem(line-height, 35px);
+  text-align: left;
+}
+
+/* 图片上传按钮的样式 END */
+
+/* 表单样式 START */
+.sign-up {
+  .input-line {
+    position: relative;
+  }
+  .fileWrap label.error {
+    width: 210px;
+    left: 26%;
+    top: 78%;
+    border: 1px solid rgba(255, 66, 66, 0.76);
+
+  }
+  label.error {
+    width: 60%;
+    height: 0.66667rem;
+    line-height: 0.6rem;
+    position: absolute;
+    right: 10%;
+    top: 34px;
+    text-align: left;
+    padding-left: 0.13333rem;
+    color: #fff;
+    z-index: 2;
+    background-color: rgba(255, 66, 66, 0.76);
+    opacity: 0;
+  }
+  label.error:after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid rgba(255, 66, 66, 0.76);
+    opacity: 0;
+  }
+  input.error {
+    border: 1px solid rgba(255, 66, 66, 0.76);
+  }
+
+}
+
+/* 表单样式 END */
+/* =========
+   报名页 END
+   =========*/
+
+/* ===========
+   排行榜 START
+   =========== */
+.bg-wrapper {
+  background: url("../img/bg.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+.list-main {
+  padding: 0 10px;
+  @include px2rem(padding-top, 250px);
+  @include font-dpr(12px);
+  background: url("../img/share.jpg") no-repeat center top;
+  background-size: 100%;
+}
+
+.list-main .list-head li {
+  float: left;
+  width: 20%;
+  text-align: center;
+  color: #fff;
+  @include px2rem(height,40px);
+}
+
+.list-main .list-head li:nth-child(1) {
+  width: 13% !important;
+}
+
+.list-main .list-head li:nth-child(2) {
+  width: 25% !important;
+}
+
+.list-main .list-head li:nth-child(3) {
+  width: 20% !important;
+}
+
+.list-main .list-head li:nth-child(4) {
+  width: 28% !important;
+}
+
+.list-main .list-head li:nth-child(5) {
+  width: 14% !important;
+  text-align: left;
+}
+
+.list-main .list-content {
+  color: #fff;
+  width: 100%;
+}
+
+.list-main .list-content li {
+  width: 100%;
+  @include px2rem(height,100px);
+  @include px2rem(line-height,100px);
+  clear: both;
+}
+
+.list-main .list-content a {
+  position: relative;
+  display: block;
+  color: #fff;
+}
+
+.list-main .list-content a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background: transparent url("../img/line.png") no-repeat top center;
+  background-size: cover;
+
+}
+
+.list-main .list-content li {
+  font-size: 0;
+}
+
+.list-main .list-content li span:nth-child(1) {
+  width: 13% !important;
+}
+
+.list-main .list-content li span:nth-child(2) {
+  width: 25% !important;
+  padding: 0 3px;
+  color: #91d0ff;
+}
+
+.list-main .list-content li span:nth-child(3) {
+  width: 20% !important;
+  padding: 0 3px;
+  color: #91d0ff;
+}
+
+.list-main .list-content li span:nth-child(4) {
+  width: 30% !important;
+  padding: 0 3px;
+}
+
+.list-main .list-content li span:nth-child(5) {
+  width: 12% !important;
+  color: #f8ab06;
+}
+
+.list-main .list-content li span {
+  @include font-dpr(12px);
+  display: inline-block;
+  text-align: center;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-content li span.medal {
+  color: transparent;
+}
+
+.list-content li span.gold {
+  background: url("../img/gold.png") no-repeat center center;
+  @include px2rem(background-size, 50px);
+}
+
+.list-content li span.silver {
+  background: url("../img/silver.png") no-repeat center center;
+  @include px2rem(background-size, 50px);
+}
+
+.list-content li span.bronze {
+  background: url("../img/bronze.png") no-repeat center center;
+  @include px2rem(background-size, 50px);
+
+}
+
+/* =========
+   排行榜 END
+   ========= */
+
+/* =========
+   首页 START
+   ========= */
+.wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.wrap img {
+  width: 100%;
+}
+
+.arrow {
+  @include px2rem(margin-top, 80px);
+  display: inline-block;
+  @include px2rem(width, 26px);
+  @include px2rem(height, 24px);
+  background: url("../img/arrow.png") no-repeat center top;
+  background-size: 100%;
+  animation: move .5s ease-in-out infinite alternate;
+}
+.ball{
+  animation: move .5s ease-in-out infinite alternate;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  border-radius: 50%;
+  background: #000;
+  //font-family: 'Roboto';
+  font-size: 14px;
+  color: #FFF;
+  text-align: center;
+  line-height: 40px;
+  display: inline-block;
+}
+
+@-moz-keyframes move {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@-o-keyframes move {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+
+
+//--------------------------小球
+//
+//height: 40px;
+//width: 40px;
+//position: absolute;
+//border-radius: 50%;
+//                 background: #000;
+//font-family: 'Roboto';
+//font-size: 14px;
+//color: #FFF;
+//text-align: center;
+//line-height: 40px;
+//display: inline-block;
+
+/* ========
+   首页 END
+   ======== */
+
+/* ===========
+   详情页 START
+   =========== */
+.detail {
+  width: 100%;
+  @include px2rem(padding-left, 50px);
+  @include px2rem(padding-right, 50px);
+  color: #fff;
+}
+
+.title_item {
+  @include px2rem(margin-bottom, 50px);
+  @include px2rem(width, 300px);
+  @include px2rem(height, 140px);
+}
+.l_title{
+  @include px2rem(width, 455px);
+  @include px2rem(height, 140px);
+}
+.s_title {
+  display: block;
+  @include px2rem(margin-bottom, 50px);
+  @include px2rem(margin-top, 50px);
+  @include px2rem(width, 269px);
+  @include px2rem(height, 17px);
+}
+
+.title_item img {
+  width: 100%;
+}
+.about{
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+.about p.l-h-100 {
+  @include px2rem(line-height, 140px);
+  @include font-dpr(18px);
+}
+
+.about p {
+  @include font-dpr(14px);
+  line-height: 1.4;
+}
+
+.co_sponsor {
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+}
+
+//.co_sponsor img {
+//}
+.img_w_30{
+  img{
+    width: 31%;
+    @include px2rem(height, 44px);
+    margin: 0 5px;
+  }
+}
+.img_w_20{
+  img{
+    width: 23%;
+    @include px2rem(height, 44px);
+
+    //margin: 0 0.5% 5px;
+  }
+  img:nth-child(2){
+    margin: 0 4px;
+  }
+  img:nth-child(3){
+    margin-right: 4px;
+  }
+}
+.co_sponsor img:nth-child(1){
+  //margin-right: 3.5%;
+}
+
+.standard {
+  width: 100%;
+  overflow: auto;
+  ul {
+    @include px2rem(margin-top, 75px);
+    color: #fff;
+  }
+  ul li {
+    width: 25%;
+    text-align: center;
+    float: left;
+    p {
+      @include px2rem(margin-top, 30px);
+      @include font-dpr(12px);
+    }
+    h3 {
+      @include px2rem(width, 122px);
+      @include px2rem(height, 122px);
+      font-weight: normal;
+      @include font-dpr(14px);
+      background: url("../img/count_bg.png") no-repeat center center;
+      background-size: 100%;
+      strong {
+        @include px2rem(padding-top, 30px);
+        display: block;
+        @include px2rem(line-height, 40px);
+      }
+      span {
+        display: block;
+        @include font-dpr(12px);
+
+      }
+
+    }
+  }
+}
+
+.step {
+  p{
+
+    line-height: 1.6;
+  }
+  .step_img {
+    @include px2rem(padding-left, 40px);
+    @include px2rem(padding-right, 40px);
+    img {
+      width: 100%;
+    }
+  }
+  .qr_code {
+    @include px2rem(margin-top, 40px);
+    @include px2rem(margin-bottom, 40px);
+    @include px2rem(width, 139px);
+    @include px2rem(height, 139px);
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.state {
+  ul {
+    @include font-dpr(12px);
+    li {
+      @include px2rem(padding-left, 160px);
+      line-height: 1.6;
+    }
+    li:nth-child(1) {
+      @include px2rem(padding-bottom, 120px);
+      background: url("../img/top100.png") no-repeat left top;
+      background-size: 1.6266666666666667rem 1.92rem;
+    }
+    li:nth-child(2) {
+      background: url("../img/top30.png") no-repeat left top;
+      background-size: 1.6266666666666667rem 1.92rem;
+    }
+    li:nth-child(3) {
+      background: url("../img/top10.png") no-repeat left top;
+      background-size: 1.6266666666666667rem 1.92rem;
+    }
+  }
+}
+
+.jury {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  ul {
+    width: 100%;
+    li {
+      //@include px2rem(margin-bottom, 60px);
+      @include px2rem(padding-left, 15px);
+      @include px2rem(padding-right, 15px);
+      width: 50%;
+      float: left;
+      //border: 3px solid #54b1fd;
+      h3 {
+        @include px2rem(margin-top, 32px);
+        @include px2rem(margin-bottom, 5px);
+
+        @include font-dpr(18px);
+        line-height: 1;
+      }
+      h5 {
+        //@include px2rem(margin-bottom, 10px);
+        @include font-dpr(12px);
+        line-height: 1.2;
+      }
+      p {
+        @include font-dpr(12px);
+      }
+      .jury_img {
+        text-align: center;
+        vertical-align: bottom;
+        //background-color: #ec7368;
+        @include px2rem(height,230px);
+
+        img {
+          width: 90%;
+          //height: 100%;
+          vertical-align: bottom;
+
+        }
+      }
+    }
+    li:nth-child(1),li:nth-child(2){
+      @include px2rem(height,400px);
+    }
+    li:nth-child(3),li:nth-child(4),li:nth-child(5),li:nth-child(6){
+      @include px2rem(height,440px);
+    }
+    li:nth-child(7){
+      //width: 50%;
+      margin-left: 25%;
+      @include px2rem(height,370px);
+
+    }
+  }
+}
+
+.footer_btn {
+  a {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 50%;
+    img {
+      @include px2rem(width, 243px);
+      @include px2rem(height, 52px);
+    }
+  }
+}
+
+/* ========
+   详情页 END
+   ======== */
+
+/* ==========
+   分享 START
+   ========== */
+.p-t-340{
+  @include px2rem(padding-top, 400px);
+}
+.p-t-280{
+  @include px2rem(padding-top, 280px);
+}
+.share {
+  width: 100%;
+  background: url("../img/share.jpg") no-repeat center top;
+  background-size: 100%;
+  strong {
+    line-height: 1.5;
+  }
+  h2 {
+    @include font-dpr(32px);
+    line-height: 2;
+    font-weight: bolder;
+    background: url("../img/share_title.png") no-repeat center center;
+    background-size: 100%;
+  }
+  .slogan {
+    @include px2rem(margin-top, 10px);
+    width: 70%;
+    line-height: 5;
+    img {
+      width: 100%;
+    }
+  }
+  .like {
+    position: relative;
+    @include px2rem(margin-bottom, 95px);
+    text-align: center;
+    @include font-dpr(12px);
+    .logo_img {
+      position: absolute;
+      right: 5%;
+      top: -4%;
+      .img_wrap {
+        @include px2rem(width, 160px);
+        @include px2rem(height, 160px);
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        img {
+          width: 80%;
+          vertical-align: middle;
+        }
+      }
+      p{
+        //color: #f0f;
+        @include px2rem(margin-top, 7px);
+      }
+    }
+    .like_btn {
+      @include px2rem(margin-bottom, 20px);
+      display: block;
+      width: 18%;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+
+  }
+  .share_btn {
+    @include px2rem(padding-left, 80px);
+    @include px2rem(padding-right, 80px);
+    a {
+      display: block;
+      float: left;
+      @include px2rem(margin-bottom, 50px);
+      width: 50%;
+      text-align: center;
+      img {
+        width: 90%;
+      }
+    }
+  }
+
+}
+.share>p{
+  font-weight: bolder;
+}
+
+/* ========
+   分享 END
+   ======== */
